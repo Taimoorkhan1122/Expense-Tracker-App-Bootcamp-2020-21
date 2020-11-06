@@ -1,13 +1,167 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+    --drop-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    --global-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #f7f7f7;
+    font-family: Lato;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    /* font-family: 'lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; */
+    margin: 0;
+}
+
+/* .container {
+    margin: 30px auto;
+    width: 350px;
+} */
+
+h1 {
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+h3 {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin: 40px 0 10px;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--drop-shadow);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+.money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+}
+
+.money.plus {
+    color: #2ecc71;
+  }
+  
+  .money.minus {
+    color: #c0392b;
+  }
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+    display: block;
+    width: 100%;
+    border: 1px solid #dedede;
+    border-radius: 2x;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.btn {
+    cursor: pointer;
+    display: block;
+    background-color: #9c88ff;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0 30px;
+    border: 0;
+    box-shadow: var(--drop-shadow);
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li{
+    background: #E5E5E5;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+
+    /* box-shadow: var(--drop-shadow); */
+    color: #0081DF;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+li.minus {
+    border-right: 3px solid #c0392b;
+}
+
+li.plus {
+    border-right: 3px solid #2ecc71;
+}
+
+.history {
+    max-height: 300px;
+    overflow: auto;
+    margin: 0;
+}
+
+.delete-btn {
+    display: none;
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+.list li:hover .delete-btn {
+    opacity: 1;
+  } 

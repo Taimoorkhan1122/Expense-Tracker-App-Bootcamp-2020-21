@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    background: #0081DF;
+    /* Global shadow */
+    box-shadow: var(--global-shadow);
+    margin: 0;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    width: 1182px;
+    color: #fff;
+    /* background-color: blueviolet; */
+}
+
+header h2 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 10px;
+}
+
+
