@@ -126,7 +126,7 @@
     /* transform: matrix(0, 1, 1, 0, 0, 0); */
 }
 
-input[type=submit] {
+form button {
     width: 16vw;
     height: 8vh;
     padding: 10px;
@@ -136,7 +136,7 @@ input[type=submit] {
     border-radius: 10px;
     margin: 10vh 0;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.7em;
     font-style: normal;
     font-weight: normal;
     line-height: 32px;

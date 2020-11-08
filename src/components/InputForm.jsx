@@ -5,21 +5,23 @@ import { GlobalContext } from '../Context/GlobalContext'
 export const InputForm = () => {
 
     const [text, setText] = useState('');    
-    const [amount, setAmount] = useState(0);    
+    const [amount, setAmount] = useState(0);   
 
     const { addTransactions } = useContext(GlobalContext);
-
+    
+    const onSubmit = e => {
+        e.preventDefault();
+        const newTransaction = {
+            id: Math.floor(Math.random() * 100000),
+            text: text,
+            amount: +amount,
+        };
+        addTransactions(newTransaction);
+        setText("");
+        setAmount(0);
+    }
     return(
-        <form className="transaction-form" onSubmit={e => {
-                e.preventDefault();
-                const newTransaction = {
-                id: Math.floor(Math.random() * 100000),
-                text,
-                amount: +amount,
-                }
-                addTransactions(newTransaction)
-
-                }}>
+        <form className="transaction-form" onSubmit={onSubmit}>
             <div className="input-fields">
                 <div className="description">
                     <label htmlFor="description">Add transaction details</label>
@@ -48,7 +50,7 @@ export const InputForm = () => {
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Add Transaction"/>
+            <button className="addtransaction" >Add Transaction</button>
         </form>
     )
 }
