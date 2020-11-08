@@ -3,6 +3,8 @@
 :root {
     --drop-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     --global-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+    --expense-color: #e74c3c;
+    --income-color: #2ecc71;
 }
 
 * {

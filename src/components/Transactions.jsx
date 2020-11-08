@@ -8,7 +8,7 @@ import './transactions.css'
 export const Transactions = () => {
     const { transactions }= useContext(GlobalContext);
 
-     let amounts = transactions.map((item) => item.amount);
+    let amounts = transactions.map((item) => item.amount);
     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
     return(
         <div className="transactions">

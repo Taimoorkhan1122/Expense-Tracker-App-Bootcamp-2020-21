@@ -1,20 +1,23 @@
 import { useState } from 'react'
 import { useContext } from 'react'
 import { GlobalContext } from '../Context/GlobalContext'
+import { IncomExpense } from './IncomExpense';
 
 export const InputForm = () => {
 
     const [text, setText] = useState('');    
     const [amount, setAmount] = useState(0);   
 
-    const { addTransactions } = useContext(GlobalContext);
+
+    const { addTransactions, expenseState } = useContext(GlobalContext);
     
     const onSubmit = e => {
         e.preventDefault();
         const newTransaction = {
             id: Math.floor(Math.random() * 100000),
             text: text,
-            amount: +amount,
+            // amount: +amount
+            amount: expenseState[0]? +amount: +amount*-1,
         };
         addTransactions(newTransaction);
         setText("");
