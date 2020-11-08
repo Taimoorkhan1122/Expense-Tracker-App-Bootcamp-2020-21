@@ -33,6 +33,10 @@ body {
 h1 {
     letter-spacing: 1px;
     margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
 }
 
 h3 {
@@ -41,17 +45,18 @@ h3 {
     margin: 40px 0 10px;
 }
 
-h4 {
+/* h4 {
+    font-size: 1.5rem;
     margin: 0;
     text-transform: uppercase;
-}
+} */
 
 .inc-exp-container {
-    background-color: #fff;
-    box-shadow: var(--drop-shadow);
+    /* background-color: #fff; */
+    /* box-shadow: var(--global-shadow); */
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-around;
+    /* padding: 20px; */
     margin: 20px 0;
 }
 
@@ -121,8 +126,6 @@ input[type='number'] {
     /* or 178% */
     letter-spacing: 0.2px;
     text-transform: capitalize;
-
-    /* box-shadow: var(--drop-shadow); */
     color: #0081DF;
     display: flex;
     justify-content: space-between;
@@ -131,13 +134,28 @@ input[type='number'] {
     margin: 10px 0;
 }
 
-li.minus {
-    border-right: 3px solid #c0392b;
+li.minus span{
+    color: #c0392b;
 }
 
-li.plus {
-    border-right: 3px solid #2ecc71;
+li.plus span{
+    color: #2ecc71;
 }
+
+li button {
+    opacity: 0;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    transition: opacity 0.25s ease-in-out;
+
+}
+
+li:hover button {
+    opacity: 1;
+  }
 
 .history {
     max-height: 300px;

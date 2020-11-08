@@ -1,22 +1,23 @@
+import { useContext } from 'react'
+import { GlobalContext } from '../Context/GlobalContext'
+
+import { TransactionList } from './TransactionList'
+import { IncomExpense } from './IncomExpense'
 import './transactions.css'
 
 export const Transactions = () => {
+    const { transactions }= useContext(GlobalContext);
+
+     let amounts = transactions.map((item) => item.amount);
+    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
     return(
         <div className="transactions">
             <div className="balance">
                 <h1>Balance</h1>
-                <h4 id="balance">$0.00</h4>
+                <h4 id="balance">${total}</h4>
             </div>
-            <div className="transaction-list">
-                {/* <!-- income list here --> */}
-                <div class="history">
-                    <ul class="list" id="list">
-                        <li >
-                            Camera <span>$0.00</span> <button class="delete-btn">X</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>   
+            <TransactionList/>
+            <IncomExpense />
         </div>
     )
 }
