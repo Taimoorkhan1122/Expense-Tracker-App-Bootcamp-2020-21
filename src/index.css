@@ -43,8 +43,6 @@ h3 {
 } */
 
 .inc-exp-container {
-    /* background-color: #fff; */
-    /* box-shadow: var(--global-shadow); */
     display: flex;
     justify-content: space-around;
     /* padding: 20px; */

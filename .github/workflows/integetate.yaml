@@ -1,4 +1,4 @@
-name: React-Single-Page-Website
+name: Expense-Tracker-App
 
 on: [push]
 
@@ -23,4 +23,8 @@ jobs:
       - name: Install surge
         run: npm install -g surge
       - name: Run Surge
-        run: surge ./build react-single-page.surge.sh --token ${{secrets.MY_SECRET}} 
+        run: surge ./build expense-tracker-taimoor.surge.sh --token ${{secrets.MY_SECRET}} 
+
+
+
+        
