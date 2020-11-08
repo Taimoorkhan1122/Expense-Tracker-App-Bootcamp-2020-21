@@ -18,19 +18,8 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: 32px;
-    /* font-family: 'lato', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; */
     margin: 0;
 }
-
-/* .container {
-    margin: 30px auto;
-    width: 350px;
-} */
 
 h1 {
     letter-spacing: 1px;
@@ -185,3 +174,6 @@ li:hover button {
 .list li:hover .delete-btn {
     opacity: 1;
   } 
+
+ 
+}

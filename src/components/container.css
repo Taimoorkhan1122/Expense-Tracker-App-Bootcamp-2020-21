@@ -1,5 +1,5 @@
 .container {
-    width: 1182px;
+    max-width: 90%;
     margin: auto;
     margin-top: 20px;
     padding: 20px;
@@ -7,11 +7,33 @@
     /* flex-direction: column; */
     justify-content: space-around;
     align-items: center;
-    /* min-height: 100vh;  */
     width: 1028px;
     height: 80vh;
     border-radius: 15px;
     box-shadow: var(--global-shadow);
     /* color: #fff; */
     /* background-color: blueviolet; */
+}
+
+ @media (max-width: 800px) {
+    .container {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .input-fields {
+    flex-wrap: wrap;
+    margin: 0;
+    }
+    .input-fields .amount {
+        margin: 0;
+    }
+    form button {
+         width: 50vw;
+        height: 8vh;
+    }
+    .transactions {
+        width: 100%;
+    }
 }
