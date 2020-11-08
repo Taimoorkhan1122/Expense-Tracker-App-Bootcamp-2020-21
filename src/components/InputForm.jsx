@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useContext } from 'react'
 import { GlobalContext } from '../Context/GlobalContext'
-import { IncomExpense } from './IncomExpense';
+// import { IncomExpense } from './IncomExpense';
 
 export const InputForm = () => {
 
